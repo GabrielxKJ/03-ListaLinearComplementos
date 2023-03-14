@@ -122,9 +122,37 @@ void inserirElemento()
 
 void excluirElemento()
 {
+	int valor;
+	cout << "digite a posicao do elemento";
+	cin >> valor;
+	
+	//
+	int pos = posicaoElemento(valor);
+
+	if (pos != -1) {
+		int ultimaPosicao = lista[nElementos - 1];
+		lista[pos] = ultimaPosicao;
+		nElementos--;
+	}
+	else {
+		cout << "elemento não encotrado";
+	}
+	exibirElementos()
+}
+
+
+	
+
+
+
 
 
 }
+
+//Pede para o usuario digitar um numero
+//Busca o numero na lista
+//Se encontrado exclue o elemento e atualiza a quantidade de elementos na lista
+//Se não econtrado exibe "elemento não encontrado"
 
 void buscarElemento()
 {
@@ -152,3 +180,4 @@ int posicaoElemento(int busca)
 	}
 	return posicao;
 }
+
